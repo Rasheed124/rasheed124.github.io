@@ -1,7 +1,7 @@
 import { TiArrowForward } from "react-icons/ti";
 import { motion } from "framer-motion";
 
-const Apple = () => {
+const P23Africa = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,54 +10,42 @@ const Apple = () => {
       className="w-full"
     >
       <h3 className="flex gap-1 font-medium text-xl font-titleFont">
-        Wordpress Developer
-        <span className="text-textGreen tracking-wide">@ZenithPrecision</span>
+        Frontend Developer
+        <span className="text-textGreen tracking-wide">@P23 Africa</span>
       </h3>
-
       <div className="flex flex-col md:flex-row md:justify-between text-sm mt-1 font-medium text-textDark">
-        <p>Feb 2021 - Dec 2021</p>
-        <p className="text-textGreen">Lagos, Nigeria (Hybrid)</p>
+        <p>Aug 2025 - Jan 2026</p>
+        <p className="text-textGreen">London (Remote)</p>
       </div>
+
       <ul className="mt-6 flex flex-col gap-3">
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Designed elegant and responsive websites using custom WordPress themes
-          and PHP, enabling clients to grow their businesses and reach their
-          target audience.
+          Developed and optimized high-performance digital platforms focused on scaling African businesses and ensuring investment readiness.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Conducted comprehensive quality assurance tests to identify and
-          rectify flaws, enhancing the usability of websites.
+          Collaborated seamlessly with back-end teams to consume and integrate Laravel API structures, ensuring efficient data flow and robust application logic.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Developed bespoke WordPress themes to help customers effectively
-          promote themselves and increase their income.
+          Translated strategic marketing and operational requirements into intuitive, user-friendly interfaces that drive business growth and user engagement.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Assisted in maintaining and updating web content, ensuring it remains
-          accurate and up-to-date for visitors.
-        </li>
-        <li className="text-base flex gap-2 text-textDark">
-          <span className="text-textGreen mt-1">
-            <TiArrowForward />
-          </span>
-          Provided technical support to clients, resolving issues and ensuring a
-          smooth user experience on their websites.
+          Maintained and improved existing codebases, implementing modern frontend best practices to ensure platforms remain sustainable and scalable.
         </li>
       </ul>
     </motion.div>
   );
 };
 
-export default Apple;
+export default P23Africa;

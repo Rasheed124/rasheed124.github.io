@@ -1,24 +1,29 @@
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
-import Amazon from "./works/Amazon";
 import Apple from "./works/Apple";
 import Google from "./works/Google";
 import ReactBD from "./works/ReactBD";
 import Splash from "./works/Splash";
+import P23Africa from "./works/P23Africa";
+import ArthuriteIntegrated from "./works/ArthuriteIntegrated";
 
 const Experience = () => {
   const [workReactbd, setWorkReactbd] = useState(true);
   const [workGoogle, setWorkGoogle] = useState(false);
   const [workApple, setWorkApple] = useState(false);
   const [workSplash, setWorkSplash] = useState(false);
-  const [workAmazon, setWorkAmazon] = useState(false);
+  const [workP23, setWorkP23] = useState(false);
+  const [workArthuriteIntegrated, setworkArthuriteIntegrated] = useState(false);
 
   const handleReactbd = () => {
     setWorkReactbd(true);
     setWorkGoogle(false);
     setWorkApple(false);
     setWorkSplash(false);
-    setWorkAmazon(false);
+    setWorkP23(false);
+    setworkArthuriteIntegrated(false);
+
+    setWorkP23(false);
   };
 
   const handleGoogle = () => {
@@ -26,7 +31,10 @@ const Experience = () => {
     setWorkGoogle(true);
     setWorkApple(false);
     setWorkSplash(false);
-    setWorkAmazon(false);
+    setWorkP23(false);
+    setworkArthuriteIntegrated(false);
+
+    setWorkP23(false);
   };
 
   const handleApple = () => {
@@ -34,21 +42,37 @@ const Experience = () => {
     setWorkGoogle(false);
     setWorkApple(true);
     setWorkSplash(false);
-    setWorkAmazon(false);
+    setWorkP23(false);
+    setworkArthuriteIntegrated(false);
+
+    setWorkP23(false);
   };
   const handleSplash = () => {
     setWorkReactbd(false);
     setWorkGoogle(false);
     setWorkApple(false);
+    setworkArthuriteIntegrated(false);
+
+    setWorkP23(false);
     setWorkSplash(true);
-    setWorkAmazon(false);
+    setWorkP23(false);
   };
-  const handleAmazon = () => {
+  const handleP23 = () => {
     setWorkReactbd(false);
     setWorkGoogle(false);
     setWorkApple(false);
     setWorkSplash(false);
-    setWorkAmazon(true);
+    setworkArthuriteIntegrated(false);
+
+    setWorkP23(true);
+  };
+  const handleArthuriteIntegrated = () => {
+    setWorkReactbd(false);
+    setWorkGoogle(false);
+    setWorkApple(false);
+    setWorkSplash(false);
+    setWorkP23(false);
+    setworkArthuriteIntegrated(true);
   };
   return (
     <section
@@ -59,6 +83,27 @@ const Experience = () => {
       <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
         <ul className="md:w-32 flex flex-col">
           <li
+            onClick={handleP23}
+            className={`${
+              workP23
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+          >
+            P23 Africa
+          </li>
+          <li
+            onClick={handleArthuriteIntegrated}
+            className={`${
+              workArthuriteIntegrated
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+          >
+            Arthurite Integrated
+          </li>
+
+          <li
             onClick={handleReactbd}
             className={`${
               workReactbd
@@ -66,7 +111,7 @@ const Experience = () => {
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
-           Duromedia
+            Duromedia
           </li>
           <li
             onClick={handleGoogle}
@@ -78,6 +123,17 @@ const Experience = () => {
           >
             Ascent Tech
           </li>
+
+          <li
+            onClick={handleSplash}
+            className={`${
+              workSplash
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+          >
+            Ascent Tech Academy
+          </li>
           <li
             onClick={handleApple}
             className={`${
@@ -88,23 +144,13 @@ const Experience = () => {
           >
             Zenith Precision
           </li>
-          <li
-            onClick={handleSplash}
-            className={`${
-              workApple
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Ascent Tech Academy
-          </li>
-        
         </ul>
         {workReactbd && <ReactBD />}
         {workGoogle && <Google />}
         {workApple && <Apple />}
         {workSplash && <Splash />}
-        {/* {workAmazon && <Amazon />}  */}
+        {workArthuriteIntegrated && <ArthuriteIntegrated />}
+        {workP23 && <P23Africa />}
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 const Banner = () => {
@@ -22,18 +21,18 @@ const Banner = () => {
         className="text-4xl lgl:text-6xl font-libre-baskerville font-semibold flex flex-col"
       >
         Rasheed Tolulope.
-        <span className="text-textDark mt-2 lgl:mt-4">
-        I create content for the web.
+        <span className="text-textDark lg:text-2xl text-base mt-2 lgl:mt-4">
+          I build dynamic, user-focused experiences <br /> for web and mobile.
         </span>
       </motion.h1>
       <motion.p
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="text-base md:max-w-[650px] text-textDark font-medium"
+        className="text-sm md:max-w-[650px] text-textDark font-medium"
       >
-        I have been working with React for more than 4 years as a web developer. I am proficient in using React and its ecosystem to create user-friendly and responsive web applications. I have a solid background in front-end and back-end programming.{" "}
-         {/* <a href="https://www.noormohammad.live/" target="_blank">
+        {/* I build dynamic, user-focused experiences for web and mobile.{" "} */}
+        {/* <a href="https://www.noormohammad.live/" target="_blank">
        
           <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
             Learn more
@@ -41,7 +40,7 @@ const Banner = () => {
           </span>
         </a>  */}
       </motion.p>
-      <a href="#projects" >
+      <a href="#projects">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
