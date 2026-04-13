@@ -131,7 +131,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
           </ul>
-          <a href="https://flowcv.com/resume/ak4qv6c85v" target="_blank">
+          <a href="https://drive.google.com/file/d/129Xm2vE-JqqhgGMMo4McbG4M0JymzWOd/view?usp=sharing" target="_blank">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
