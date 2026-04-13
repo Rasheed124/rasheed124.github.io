@@ -8,11 +8,11 @@ import P23Africa from "./works/P23Africa";
 import ArthuriteIntegrated from "./works/ArthuriteIntegrated";
 
 const Experience = () => {
-  const [workReactbd, setWorkReactbd] = useState(true);
+  const [workReactbd, setWorkReactbd] = useState(false);
   const [workGoogle, setWorkGoogle] = useState(false);
   const [workApple, setWorkApple] = useState(false);
   const [workSplash, setWorkSplash] = useState(false);
-  const [workP23, setWorkP23] = useState(false);
+  const [workP23, setWorkP23] = useState(true);
   const [workArthuriteIntegrated, setworkArthuriteIntegrated] = useState(false);
 
   const handleReactbd = () => {
