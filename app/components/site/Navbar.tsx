@@ -131,7 +131,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
           </ul>
-          <a href="https://drive.google.com/file/d/1p4h_4FGIMmcrHeG5esK5e_4wevBii4HH/view?usp=sharing" target="_blank">
+          <a href="https://drive.google.com/file/d/16szLa4NJrme9bA-SZnkVUQVn96h_doo1/view?usp=sharing" target="_blank">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -240,7 +240,7 @@ const Navbar = () => {
                     </motion.li>
                   </Link>
                 </ul>
-                <a href="https://drive.google.com/file/d/1p4h_4FGIMmcrHeG5esK5e_4wevBii4HH/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/16szLa4NJrme9bA-SZnkVUQVn96h_doo1/view?usp=sharing" target="_blank">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
