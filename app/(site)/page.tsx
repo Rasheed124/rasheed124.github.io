@@ -8,9 +8,7 @@ import Banner from "../components/site/Banner";
 import About from "../components/site/About";
 import Experience from "../components/site/Experience";
 import Projects from "../components/site/Projects";
-import Archive from "../components/site/Archive";
 import Contact from "../components/site/Contact";
-import Footer from "../components/site/Footer";
 
 export default function Home() {
   return (
@@ -30,9 +28,7 @@ export default function Home() {
           <About />
           <Experience />
           <Projects />
-          {/* <Archive /> */}
           <Contact />
-          <Footer />
         </div>
         <motion.div
           initial={{ opacity: 0 }}

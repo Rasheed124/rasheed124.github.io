@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
+import Link from "next/link";
 const Banner = () => {
   return (
     <section
@@ -40,7 +41,7 @@ const Banner = () => {
           </span>
         </a>  */}
       </motion.p>
-      <a href="#projects">
+      <Link href="#projects">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -49,7 +50,7 @@ const Banner = () => {
         >
           Check out my project!
         </motion.button>
-      </a>
+      </Link>
     </section>
   );
 };
