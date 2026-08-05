@@ -77,11 +77,11 @@ export async function sanityFetch<T>({
 
   return client
     .withConfig({
-      useCdn: false, // 👈 CRITICAL FIX
+      useCdn: false,
     })
     .fetch<T>(query, params, {
       next: {
-        tags, // Tags used for instant revalidation via Webhooks
+        tags, 
       },
     });
 }

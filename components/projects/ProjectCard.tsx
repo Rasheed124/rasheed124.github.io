@@ -17,6 +17,7 @@ import {
 import { urlFor } from "@/sanity/lib/image";
 import { ProjectItem } from "@/types/project";
 import { TechIcon } from "../ui/TechIcon";
+import Link from "next/link";
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -71,14 +72,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between gap-4">
         <div className="space-y-2">
           {/* Header & External Links */}
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="font-bold text-lg text-text-primary tracking-tight ">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-bold text-base text-text-primary tracking-tight ">
               {project.title}
             </h3>
 
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="flex  items-start gap-2 shrink-0">
               {project.liveUrl && (
-                <a
+                <Link
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,11 +87,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 >
                   <Link2 size={13} />
                   <span>Live</span>
-                </a>
+                </Link>
               )}
 
               {project.codeUrl && (
-                <a
+                <Link
                   href={project.codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -98,7 +99,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 >
                   <VscGithubInverted size={13} />
                   <span>Code</span>
-                </a>
+                </Link>
               )}
             </div>
           </div>

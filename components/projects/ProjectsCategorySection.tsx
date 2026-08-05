@@ -28,7 +28,7 @@ export function ProjectsCategorySection({ block }: CategoryProjectsSectionProps)
             <div key={category._id} className="space-y-6">
               {/* Category Header with Counter */}
               <div className="flex items-baseline gap-2 border-b border-border-subtle/50 pb-3">
-                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary">
+                <h2 className="text-lg lg:text-2xl font-bold tracking-tight text-text-primary">
                   {category.title}
                 </h2>
                 <span className="text-xs sm:text-sm text-text-primary/50 font-medium">
