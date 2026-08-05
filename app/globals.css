@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-parkinsans), sans-serif;
+
+  --color-bg-primary: var(--bg-primary);
+  --color-text-primary: var(--text-primary);
+  --color-border-subtle: var(--border-subtle);
+
+  /* Button Colors */
+  --color-btn-emerald-start: #00e676;
+  --color-btn-emerald-end: #0c5c36;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: rgb(10, 25, 47); 
+  --border-subtle: #e4e4e7;
+}
+
+.dark {
+  --bg-primary: rgb(10, 25, 47);
+  --text-primary: #f4f4f5; 
+  --border-subtle: #313135;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-parkinsans), sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Add to globals.css */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -19px -19px;
+}
+
+/* For Dark Mode support */
+.dark .bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+}
