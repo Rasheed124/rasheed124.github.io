@@ -1,28 +1,3 @@
-// import { blogsData } from "@/data/blogsData";
-// import { BlogCard } from "./BlogCard";
-
-// export function BlogsList() {
-//   const totalCount = blogsData.length;
-
-//   return (
-//     <section className="space-y-4">
-//       <div className="flex items-baseline gap-2 border-b border-border-subtle/50 pb-3">
-//         <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary">
-//           All Blogs
-//         </h2>
-//         <span className="text-xs sm:text-sm text-text-primary/50 font-medium">
-//           ({totalCount} {totalCount === 1 ? "blog" : "blogs"})
-//         </span>
-//       </div>
-
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-//         {blogsData.map((blog) => (
-//           <BlogCard key={blog.id} blog={blog} />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
 
 "use client";
 
