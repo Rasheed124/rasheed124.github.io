@@ -17,11 +17,16 @@ export function BlogCard({ blog }: { blog: BlogPost }) {
     coverUrl = urlFor(blog.coverImage).url();
   }
 
-  return (
-    <Link
-      href={`/blogs/${blog.slug}`}
-      className="group flex flex-col justify-between rounded-2xl border border-border-subtle bg-bg-primary overflow-hidden transition-all duration-200 hover:border-border-subtle/80"
-    >
+  // Detect whether the slug is an external URL or an internal route path
+  const isExternal =
+    typeof blog.slug === "string" &&
+    (blog.slug.startsWith("http://") || blog.slug.startsWith("https://"));
+
+  const targetHref = isExternal ? blog.slug : `/blogs/${blog.slug}`;
+
+  // Shared inner content for both internal and external link wrappers
+  const cardContent = (
+    <>
       <div>
         {/* Banner / Cover Image */}
         <div
@@ -74,6 +79,28 @@ export function BlogCard({ blog }: { blog: BlogPost }) {
           </span>
         </div>
       </div>
+    </>
+  );
+
+  const cardClassName =
+    "group flex flex-col justify-between rounded-2xl border border-border-subtle bg-bg-primary overflow-hidden transition-all duration-200 hover:border-border-subtle/80";
+
+  if (isExternal) {
+    return (
+      <a
+        href={targetHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClassName}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={targetHref} className={cardClassName}>
+      {cardContent}
     </Link>
   );
 }
