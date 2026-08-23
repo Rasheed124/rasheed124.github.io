@@ -58,7 +58,7 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
 
       // Standalone Blog Posts
-      S.documentTypeListItem("blog").title("Blog Posts").icon(DocumentTextIcon),
+      S.documentTypeListItem("blogs").title("Blog Posts").icon(DocumentTextIcon),
 
       S.divider(),
 
@@ -91,7 +91,7 @@ export const structure: StructureResolver = (S) =>
             "page",
             "projectCategory",
             "project",
-            "blog",
+            "blogs",
             "experience",
             "education",
           ].includes(id)

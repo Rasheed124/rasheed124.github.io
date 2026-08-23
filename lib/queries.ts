@@ -244,7 +244,7 @@ export const pageBySlugQuery = `
             readTime
           },
           // Fallback: If no specific blogs selected in CMS, fetch all blogs sorted by date
-          *[_type == "blog"] | order(publishedAt desc) {
+          *[_type == "blogs"] | order(publishedAt desc) {
             _id,
             title,
             "slug": slug.current,

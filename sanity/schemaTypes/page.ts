@@ -167,7 +167,7 @@ export default defineType({
               type: "array",
               description:
                 "Leave empty to automatically fetch all published blog posts.",
-              of: [{ type: "reference", to: [{ type: "blog" }] }],
+              of: [{ type: "reference", to: [{ type: "blogs" }] }],
             }),
           ],
         },

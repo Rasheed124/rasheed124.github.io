@@ -2,7 +2,7 @@ import { defineType, defineField } from "sanity";
 import { DocumentTextIcon } from "@sanity/icons/DocumentText";
 
 export default defineType({
-  name: "blog",
+  name: "blogs",
   title: "Blog Post",
   type: "document",
   icon: DocumentTextIcon,
