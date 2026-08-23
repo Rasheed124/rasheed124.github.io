@@ -71,14 +71,7 @@
 //   content?: PortableTextBlock[];
 // }
 
-// export interface PageDocument {
-//   _id: string;
-//   _type: "page";
-//   title: string;
-//   slug: { current: string };
-//   description?: string;
-//   blocks?: PageBlock[];
-// }
+
 
 // export interface AboutBlock {
 //   _key: string;
@@ -152,6 +145,15 @@ export interface ProjectsBlock {
   sectionTitle?: string;
   projects?: ProjectItem[];
   categories?: ProjectCategoryItem[];
+}
+
+export interface PageDocument {
+  _id: string;
+  _type: "page";
+  title: string;
+  slug: { current: string };
+  description?: string;
+  blocks?: PageBlock[];
 }
 
 export interface ContactBlock {
