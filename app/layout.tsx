@@ -64,27 +64,6 @@ export default async function RootLayout({
           )}
         </ThemeProvider>
       </body>
-      {/* <body className="min-h-full flex flex-col bg-dot-grid  relative">
-        <ScrollProgress />
-
-        {children}
-
-        {isDraftMode && (
-          <>
-            <VisualEditing />
-            <div className="fixed bottom-24 right-4 z-50 bg-black/80 text-white text-xs px-3.5 py-2 rounded-full backdrop-blur-md border border-white/20 flex items-center gap-2.5 shadow-lg">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-medium">Draft Preview Active</span>
-              <a
-                href="/api/draft-mode/disable"
-                className="underline ml-1 text-white/70 hover:text-white transition-colors"
-              >
-                Exit
-              </a>
-            </div>
-          </>
-        )}
-      </body> */}
     </html>
   );
 }

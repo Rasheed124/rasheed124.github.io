@@ -12,7 +12,6 @@ interface ProjectsSectionProps {
 export function ProjectsSection({ block }: ProjectsSectionProps) {
   const [showAll, setShowAll] = useState(false);
 
-  // Consolidate direct projects & category projects without duplicates
   const allProjects = useMemo(() => {
     if (!block) return [];
 
@@ -22,7 +21,6 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
 
     const combined = [...directProjects, ...categoryProjects];
 
-    // Deduplicate by Sanity _id
     const uniqueMap = new Map<string, ProjectItem>();
     combined.forEach((proj) => {
       if (proj && proj._id) {
@@ -39,7 +37,6 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
 
   const { sectionTitle } = block;
 
-  // Limit display to 6 projects initially
   const visibleProjects = showAll ? allProjects : allProjects.slice(0, 6);
 
   return (
@@ -56,7 +53,6 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
           ))}
         </div>
 
-        {/* Toggle Button: Visible only when total projects > 6 */}
         {allProjects.length > 4 && (
           <div className="mt-8 flex justify-center">
             <button

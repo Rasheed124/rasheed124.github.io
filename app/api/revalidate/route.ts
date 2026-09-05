@@ -1,4 +1,3 @@
-// app/api/revalidate/route.ts
 
 import { revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
@@ -19,10 +18,8 @@ export async function POST(req: NextRequest) {
       return new NextResponse("Bad Request", { status: 400 });
     }
 
-    // 1. Revalidate the raw document _type (e.g., "homePage", "project", "page")
     revalidateTag(body._type, "max");
 
-    // 2. If it's the home page document, clear the "home" and "page" tags explicitly
     if (
       body._type === "landingPage" ||
       body._type === "page"
@@ -31,7 +28,6 @@ export async function POST(req: NextRequest) {
       revalidateTag("page", "max");
     }
 
-    // 3. Revalidate specific slug tag if present
     if (body.slug?.current) {
       revalidateTag(`${body._type}:${body.slug.current}`, "max");
     }

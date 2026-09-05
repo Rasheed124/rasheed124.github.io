@@ -9,7 +9,6 @@ import { urlFor } from "@/sanity/lib/image";
 export function BlogCard({ blog }: { blog: BlogPost }) {
   if (!blog || !blog.title) return null;
 
-  // Safe Image URL extraction
   let coverUrl = blog.imageUrl || "";
   if (!coverUrl && typeof blog.coverImage === "string") {
     coverUrl = blog.coverImage;
@@ -17,14 +16,12 @@ export function BlogCard({ blog }: { blog: BlogPost }) {
     coverUrl = urlFor(blog.coverImage).url();
   }
 
-  // Detect whether the slug is an external URL or an internal route path
   const isExternal =
     typeof blog.slug === "string" &&
     (blog.slug.startsWith("http://") || blog.slug.startsWith("https://"));
 
   const targetHref = isExternal ? blog.slug : `/blogs/${blog.slug}`;
 
-  // Shared inner content for both internal and external link wrappers
   const cardContent = (
     <>
       <div>

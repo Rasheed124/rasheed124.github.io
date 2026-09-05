@@ -10,9 +10,7 @@ interface ContactFooterProps {
   contactData?: ContactDocument;
 }
 
-/**
- * Resolves icon based on social platform name
- */
+
 function getSocialIcon(platform?: string): React.ReactNode {
   if (!platform) return <Globe size={16} />;
 
@@ -30,7 +28,6 @@ function getSocialIcon(platform?: string): React.ReactNode {
 export function ContactFooter({ sectionTitle, contactData }: ContactFooterProps) {
   const currentYear = new Date().getFullYear();
 
-  // Primary Copy Fallbacks
   const headline =
     sectionTitle ||
     contactData?.headline ||
@@ -48,7 +45,6 @@ export function ContactFooter({ sectionTitle, contactData }: ContactFooterProps)
     }
   }
 
-  // Links with fallback array
   const socialLinks: SanitySocialLink[] = Array.isArray(contactData?.socialLinks) && contactData.socialLinks.length > 0
     ? contactData.socialLinks
     : [
