@@ -1,6 +1,8 @@
+
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import Link from "next/link";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { ProjectsBlock } from "@/types/blocks";
 import { ProjectItem } from "@/types/project";
@@ -10,8 +12,6 @@ interface ProjectsSectionProps {
 }
 
 export function ProjectsSection({ block }: ProjectsSectionProps) {
-  const [showAll, setShowAll] = useState(false);
-
   const allProjects = useMemo(() => {
     if (!block) return [];
 
@@ -22,8 +22,9 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
     const combined = [...directProjects, ...categoryProjects];
 
     const uniqueMap = new Map<string, ProjectItem>();
+
     combined.forEach((proj) => {
-      if (proj && proj._id) {
+      if (proj?._id) {
         uniqueMap.set(proj._id, proj);
       }
     });
@@ -36,8 +37,7 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
   }
 
   const { sectionTitle } = block;
-
-  const visibleProjects = showAll ? allProjects : allProjects.slice(0, 6);
+  const visibleProjects = allProjects.slice(0, 4);
 
   return (
     <section className="w-full max-w-3xl mx-auto my-6">
@@ -46,7 +46,6 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
           {sectionTitle}
         </h2>
 
-        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {visibleProjects.map((project: ProjectItem) => (
             <ProjectCard key={project._id} project={project} />
@@ -55,13 +54,12 @@ export function ProjectsSection({ block }: ProjectsSectionProps) {
 
         {allProjects.length > 4 && (
           <div className="mt-8 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setShowAll((prev) => !prev)}
-              className="px-6 py-2.5 rounded-full border border-border-subtle bg-bg-primary text-xs sm:text-sm font-medium text-text-primary hover:bg-border-subtle/20 transition-all duration-200 cursor-pointer shadow-xs"
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-border-subtle bg-bg-primary text-xs sm:text-sm font-medium text-text-primary hover:bg-border-subtle/20 transition-all duration-200 shadow-xs"
             >
-              {showAll ? "Show less projects" : "Show all projects"}
-            </button>
+              View All Projects
+            </Link>
           </div>
         )}
       </div>
